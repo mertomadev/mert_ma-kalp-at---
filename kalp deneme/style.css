@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.heart {
+    font-size: 10rem;
+    position: relative;
+}
+
+.heart-beat {
+    position: relative;
+    z-index: -1;
+    animation: beat 1.5s linear infinite;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(.9) skew(.004turn)
+    }
+
+    21% {
+        transform: scale(1.1) skew(.008turn)
+    }
+
+    29% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1) skew(0);
+    }
+}
+
+.heart-echo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: echo 1.5s linear infinite;
+}
+
+@keyframes echo {
+    0% {
+        opacity: .5;
+        transform: scale(1);
+    }
+
+    14% {
+        opacity: .8;
+        transform: scale(.8);
+    }
+
+    21% {
+        opacity: .4;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: .0;
+        transform: scale(2);
+    }
+}
+
+.yazi {
+    color: #ebedef;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Flexbox ile yazıyı alt kısma */
+    height: 100vh;
+    margin: 0;
+    font-size: 4rem;
+    /* Yazıyı 2 kat büyütmek için font-size'ı arttırdım */
+    position: absolute;
+    bottom: 20px;
+    /* Kalbin hemen altına yerleştirmek için */
+}
