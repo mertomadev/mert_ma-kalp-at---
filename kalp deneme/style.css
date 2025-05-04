@@ -81,12 +81,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* Flexbox ile yazıyı alt kısma */
     height: 100vh;
     margin: 0;
     font-size: 4rem;
-    /* Yazıyı 2 kat büyütmek için font-size'ı arttırdım */
     position: absolute;
     bottom: 20px;
-    /* Kalbin hemen altına yerleştirmek için */
 }
